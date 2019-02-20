@@ -1,1 +1,0 @@
-node build-gatsby.js

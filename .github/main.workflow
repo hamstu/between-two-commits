@@ -9,6 +9,7 @@ action "master" {
 }
 
 action "build" {
-    uses = "./.github/build-gatsby.sh"
+    uses = "./.github/actions/build-and-deploy"
     needs = ["master"]
+    args = "wow ok args!"
 }
