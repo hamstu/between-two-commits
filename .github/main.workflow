@@ -9,7 +9,6 @@ action "master" {
 }
 
 action "build" {
-    uses = "jzweifel/gatsby-cli-github-action@v1.0.0"
+    uses = "./.github/build-gatsby.sh"
     needs = ["master"]
-    args = "build"
 }
