@@ -2,6 +2,7 @@
 
 # Install node deps
 npm install
+npm install -g gatsby-cli
 
 # Build the blog
 gatsby build

@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/hamstu/between-two-commits"
 LABEL "homepage"="http://betweentwocommits.com"
 LABEL "maintainer"="Hamish Macpherson <hamstu@gmail.com>"
 
-RUN apt-get update && apt-get -y install libgl1-mesa-glx
+RUN apt-get update && apt-get -y install libgl1-mesa-glx rsync
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
