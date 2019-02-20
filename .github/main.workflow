@@ -11,5 +11,5 @@ action "master" {
 action "build" {
     uses = "./.github/actions/build-and-deploy"
     needs = ["master"]
-    args = "wow ok args!"
+    secrets = ["BTC_SERVER_PRIVATE_KEY"]
 }
