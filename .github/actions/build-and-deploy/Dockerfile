@@ -1,4 +1,4 @@
-FROM node:8-slim
+FROM node:8
 
 LABEL "com.github.actions.name"="Build and Deploy Gatsby"
 LABEL "com.github.actions.description"="Build and deploy the Between Two Commits Gatsby blog."
