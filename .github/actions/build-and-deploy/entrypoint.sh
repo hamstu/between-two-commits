@@ -32,7 +32,7 @@ echo "${BTC_SERVER_PRIVATE_KEY}" > ./btc_id_rsa
 chmod 400 ./btc_id_rsa
 
 # Deploy to production
-rsync -avz -e "ssh -i ./btc_id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ./public github@104.238.153.82:/var/www/betweentwocommits.com
+rsync -az -e "ssh -i ./btc_id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --omit-dir-times ./public github@104.238.153.82:/var/www/betweentwocommits.com
 
 # Clean up
 rm ./btc_id_rsa
