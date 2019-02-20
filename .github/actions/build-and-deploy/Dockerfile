@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/hamstu/between-two-commits"
 LABEL "homepage"="http://betweentwocommits.com"
 LABEL "maintainer"="Hamish Macpherson <hamstu@gmail.com>"
 
-RUN apt-get update && apt-get install libglu1-mesa:i386
+RUN apt-get update && apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
