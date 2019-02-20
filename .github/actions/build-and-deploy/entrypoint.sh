@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
-# Install Gatsby CLI
-npm install -g gatsby-cli
+# Install node deps
+npm install
 
 # Build the blog
 gatsby build
