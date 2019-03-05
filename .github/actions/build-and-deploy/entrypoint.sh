@@ -27,11 +27,12 @@ echo "Deploying to server"
 echo "======================================="
 echo
 
-# Put the SSH key in a temp file
+echo "Storing key in temp file..."
 echo "${BTC_SERVER_PRIVATE_KEY}" > ./btc_id_rsa
 chmod 400 ./btc_id_rsa
 
 # Deploy to production
+echo "Deploying with rsync..."
 rsync \
   -avz \
   --no-perms \
@@ -40,7 +41,7 @@ rsync \
   --delete \
   --omit-dir-times \
   -e "ssh -i ./btc_id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
-  ./public github@104.238.153.82:/var/www/betweentwocommits.com
+  ./public ${BTC_SERVER_USER}@${BTC_SERVER_IP}:${BTC_SERVER_DEST_PATH}
 
 # Clean up
 rm ./btc_id_rsa
