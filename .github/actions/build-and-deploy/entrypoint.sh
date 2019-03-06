@@ -40,7 +40,7 @@ rsync \
   --no-group \
   --delete \
   --omit-dir-times \
-  -e "ssh -i ./btc_id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+  -e "ssh -i ./btc_id_rsa -p ${BTC_SERVER_SSH_PORT} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
   ./public ${BTC_SERVER_USER}@${BTC_SERVER_IP}:${BTC_SERVER_DEST_PATH}
 
 # Clean up
